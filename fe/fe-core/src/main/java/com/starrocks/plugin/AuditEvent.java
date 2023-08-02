@@ -66,6 +66,10 @@ public class AuditEvent {
     public String authorizedUser = "";
     @AuditField(value = "ResourceGroup")
     public String resourceGroup = "";
+    @AuditField(value = "TabletAssignment")
+    public String tabletAssignment = "";
+    @AuditField(value = "ColocateGroup")
+    public String colocateGroup = "";
     @AuditField(value = "Catalog")
     public String catalog = "";
     @AuditField(value = "Db")
@@ -143,6 +147,16 @@ public class AuditEvent {
 
         public AuditEventBuilder setResourceGroup(String resourceGroup) {
             auditEvent.resourceGroup = resourceGroup;
+            return this;
+        }
+
+        public AuditEventBuilder setTabletAssignment(String tabletAssignment) {
+            auditEvent.tabletAssignment = tabletAssignment;
+            return this;
+        }
+
+        public AuditEventBuilder setColocateGroup(String colocateGroup) {
+            auditEvent.colocateGroup = colocateGroup;
             return this;
         }
 
